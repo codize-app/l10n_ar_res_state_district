@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_res_distric_tree">
+            <field name="name">District.suscription.tree </field>
+			<field name="model">res.state.district</field>
+			<field name="arch" type="xml" >
+                <tree>
+                    <field name="name" optional="show" />
+	                <field name="state_id" optional="show" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record id="accion_state_district_menu" model="ir.actions.act_window">
+			<field name="name">Menu District</field>
+			<field name="res_model">res.state.district</field>
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="view_res_distric_tree"/>
+			<field name="help" type="html">
+				<p>
+					Distritos
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="res_partner_menu_config"
+			name="Districto"
+			parent="contacts.menu_localisation"
+			action="accion_state_district_menu"
+			sequence="2"
+		/>
+
+	</data>
+</odoo>
