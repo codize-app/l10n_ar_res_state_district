@@ -34,14 +34,21 @@
 
                 <!-- RES PARTNER -->
 
-                <!--record model="ir.ui.view" id="base.view_partner_form">
+                <!--record model="ir.ui.view" id="view_partner_form_district">
                         <field name="name">Res Partner Form</field>
                         <field name="model">res.partner</field>
-                        <field name="arch" type="xml">
-                          <field name="state_id" position="before">
-                              <field name="district_id" class="o_address_district" options="{'no_quick_create': True}" />
+                        <field name="inherit_id" ref="base.view_partner_form" />
+                        
+                          <field name="arch" type="xml">
+                           <field name="state_id" position="before">
+                              <field
+                                  name="district_id"
+                                  options="{'no_open': True, 'no_create': True}"
+                                  class="oe_edit_only"
+                              />
+                           </field>
                           </field>
-                        </field>
+                        
                 </record-->
 
 	</data>
