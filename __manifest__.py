@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Argentina Disctrics",
+    'name': "Argentina Districs",
 
     'summary': """
-        Argentina Disctrics""",
+        Argentina Districs""",
 
     'description': """
-        Argentina Disctrics
+        Argentina Districs
     """,
 
     'author': "Codize",
@@ -19,6 +19,7 @@
 
     'data': [
         'views/res_state_district.xml',
+        'security/ir.model.access.csv'
     ],
     'demo': [],
 }
